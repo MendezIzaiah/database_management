@@ -1,4 +1,4 @@
-USE `Ch07_SaleCo_MySQL_demo`;
+USE Ch07_SaleCo_MySQL_demo;
 
 SELECT CUS_FNAME AS FIRST_NAME, CUS_LNAME AS LAST_NAME, CUS_BALANCE FROM CUSTOMER
 WHERE CUS_BALANCE > 500
@@ -146,7 +146,6 @@ NATURAL JOIN LINE
 NATURAL JOIN PRODUCT
 WHERE P_DESCRIPT = 'claw hammer';
 
--- October 17th 
 -- list the product code and date the product was last received into stock for all products 
 SELECT P_CODE AS 'PRODUCT CODE', P_DESCRIPT AS DESCRIPTION, DATE_FORMAT(P_INDATE,'%d/%m/%y') AS 'DATE RECEIVED' FROM PRODUCT;
 -- usig uppercase D,M,Y will give verbose output
@@ -199,7 +198,6 @@ SELECT EMP_FNAME AS 'FIRST NAME',
 FROM EMPLOYEE
 WHERE EMP_HIRE_DATE >= DATE_ADD(LAST_DAY(EMP_HIRE_DATE), INTERVAL -7 DAY);
 
--- Oct 19th
 SELECT P_PRICE, 
 	   ROUND(P_PRICE,1) AS PRICE_1, -- 1 DECIMAL PLACE
        ROUND(P_PRICE,0) AS PRICE_0 -- NO DECIMAL
@@ -239,9 +237,6 @@ FROM EMPLOYEE;
 
 SELECT EMP_LNAME, LENGTH(EMP_LNAME) FROM EMPLOYEE;
 
--- CASE STATEMENT 
-
--- NOVEMBER 7th
 
 /* 
 create a view; right click views under the ch7 sale co schema, then put query below into the new view 
