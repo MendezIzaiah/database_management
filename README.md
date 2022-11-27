@@ -1,4 +1,4 @@
-# Repository of classwork and assignments from database management @ SJSU
+# Database management @ SJSU
 All work done in class with MySQL Workbench
 
 ## Useful links:
